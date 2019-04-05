@@ -5,8 +5,9 @@
                 <dxg:TableView ShowTotalSummary="True">
                     <!--region #Add-->
                     <dxg:TableView.ColumnMenuCustomizations>
-                        <dxb:BarCheckItem Name="checkItem1" Content="Checked" IsChecked="True" dxb:BarItemLinkActionBase.ItemLinkIndex="0" />
+                        <dxb:BarCheckItem Content="BarCheckItem" dxb:BarItemLinkActionBase.ItemLinkIndex="0" CheckedChanged="BarCheckItem_CheckedChanged" />
                         <dxb:BarItemLinkSeparator dxb:BarItemLinkActionBase.ItemLinkIndex="1" />
+                        <dxb:BarButtonItem Content="BarButtonItem" ItemClick="BarButtonItem_ItemClick"/>
                     </dxg:TableView.ColumnMenuCustomizations>
                     <!--endregion #Add-->
                     <!--region #Remove-->
