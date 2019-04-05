@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Documents;
 using DevExpress.Xpf.Bars;
@@ -23,11 +23,15 @@ namespace WpfApplication8 {
         }
 
         #region #Add
-        private void customItem1_CheckedChanged(object sender, ItemClickEventArgs e) {
+
+        private void BarCheckItem_CheckedChanged(object sender, ItemClickEventArgs e) {
+            // do something...
+        }
+
+        private void BarButtonItem_ItemClick(object sender, ItemClickEventArgs e) {
             // do something...
         }
         #endregion #Add
-
     }
 
     public class TestData {
