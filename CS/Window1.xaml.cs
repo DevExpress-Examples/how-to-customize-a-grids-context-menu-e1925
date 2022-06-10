@@ -1,7 +1,6 @@
-using System.Collections.Generic;
-using System.Windows;
-using System.Windows.Documents;
 using DevExpress.Xpf.Bars;
+using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace WpfApplication8 {
 
@@ -9,7 +8,7 @@ namespace WpfApplication8 {
         public Window1() {
             InitializeComponent();
 
-            List<TestData> list = new List<TestData>();
+            ObservableCollection<TestData> list = new ObservableCollection<TestData>();
             for (int i = 0; i < 100; i++) {
                 list.Add(new TestData() {
                     Number1 = i,
@@ -18,8 +17,7 @@ namespace WpfApplication8 {
                     Text2 = "ROW " + i
                 });
             }
-
-            DataContext = list;
+            grid.ItemsSource = list;
         }
 
         #region #Add
@@ -40,5 +38,4 @@ namespace WpfApplication8 {
         public string Text1 { get; set; }
         public string Text2 { get; set; }
     }
-
 }
